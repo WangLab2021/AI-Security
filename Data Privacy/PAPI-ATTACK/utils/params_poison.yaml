@@ -1,0 +1,64 @@
+---
+
+
+root_path: 'E:\lfw_data\race'
+gmodel_path: 'saved_params\poison'
+
+benign_label_poisoned: 1
+participant_prop_epoch: [3, 5, 11, 16, 30, 50, 60, 70, 80, 90]
+#participant_prop_epoch: [30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+poison_interval: 1
+shadow_epoch: 1
+shadow_prop_epoch: [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72, 74, 76, 78, 80, 82, 84, 86, 88, 90, 92, 94, 96, 98, 100]
+batch_size: 16
+total_len: 50
+prop_len: 40
+poison_label_swap: 0
+poisoning_per_batch: 8
+poison_lr: 0.01
+#property_per_batch: 48
+no_shadow_models: 10
+shadow_p_len: 40
+
+no_models: 3
+number_of_total_participants: 10
+is_poison: true
+baseline: true
+scale_weights: 3
+
+epochs: 100
+
+eta: 1
+#backdoor: federated learning is different there.
+#already modified helper.average_sh rink_models( to divide no_models)
+#eta = number_of_total_participants/no_models  if fully replaced with average model
+p_epoch_manual: false
+poison_epochs: [10, 15, 50, 85]
+retrain_poison: 1
+retrain_no_times: 1
+
+type: image
+test_batch_size: 1000
+lr: 0.01
+momentum: 0.9
+decay: 0.0005
+#batch_size: 64
+
+
+sampling_dirichlet: false
+dirichlet_alpha: 0.9
+
+
+save_model: False
+save_on_epochs: [10, 100, 500]
+#resumed_model: false
+#resumed_model: recover/model_cifar_10k.pt.tar
+#resumed_model: model_image_Aug.20_10.38.31/model_last.pt.tar.epoch
+
+poison_test_repeat: 1000
+
+clamp_value: 1.0
+alpha_loss: 1.0
+number_of_adversaries: 1
+poisoned_number: 2
+results_json: false
