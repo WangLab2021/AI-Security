@@ -1,0 +1,12 @@
+download==0.3.5
+loguru==0.7.3
+matplotlib==3.10.3
+mindspore @ https://ms-release.obs.cn-north-4.myhuaweicloud.com/2.6.0/MindSpore/cpu/x86_64/mindspore-2.6.0-cp310-cp310-win_amd64.whl#sha256=89d2cab829c9214b257e7df15eda8fed7e1281aa522535f3c6ff427e295c2d43
+numpy==1.26.4
+paddlepaddle==3.1.0
+pillow==11.1.0
+scikit-learn==1.7.0
+tensorflow==2.19.0
+torch==2.7.1
+torchmetrics==1.7.4
+torchvision==0.22.1
