@@ -1,6 +1,8 @@
 # ADAPTIVE FLDP
 
 **We propose an adaptive privacy-preserving federated learning （Adp-PPFL） framework, which safeguards the FL from gradient leakage attacks.**
+
+
 **We support PyTorch·PaddlePaddle·MindSpore·Tensorflow**
 
 ![image-20231031202440186](\DATA\result.png)
